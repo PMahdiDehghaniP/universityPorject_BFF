@@ -1,0 +1,28 @@
+{
+  "name": "universityporject_bff",
+  "version": "1.0.0",
+  "description": "This is the **Back-end For Frontend (BFF)** server for the UniversityProject.  \r It acts as a middle layer between the frontend and microservices, built with **Apollo Server** and **gRPC** to provide a unified and optimized GraphQL API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PMahdiDehghaniP/universityPorject_BFF.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PMahdiDehghaniP/universityPorject_BFF/issues"
+  },
+  "homepage": "https://github.com/PMahdiDehghaniP/universityPorject_BFF#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.8.0",
+    "apollo-server-express": "^3.13.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
