@@ -1,0 +1,13 @@
+input addNewLessonInput {
+  name: String
+  numberOfUnits: Int
+  collegeId: String
+}
+type addNewLessonResponse {
+  lessonId: String
+  message: String
+}
+
+type Mutation {
+  addNewLesson(addNewLessonInput: addNewLessonInput!): addNewLessonResponse!
+}
