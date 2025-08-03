@@ -38,18 +38,18 @@ cd universityProject_BFF
 npm install
 ```
 ## 🔧 How It Works
-GraphQL resolvers receive frontend requests.
-Resolvers call appropriate gRPC clients to fetch or mutate data.
-Data is composed, validated, and returned to the frontend in a GraphQL shape.
-The BFF hides the complexity of microservices from the frontend.
+- GraphQL resolvers receive frontend requests.
+- Resolvers call appropriate gRPC clients to fetch or mutate data.
+- Data is composed, validated, and returned to the frontend in a GraphQL shape.
+- The BFF hides the complexity of microservices from the frontend.
 
 
 ## 📌 Features
-✅ Modular and scalable structure
-✅ Clean separation of GraphQL and service layers
-✅ Auto-generated gRPC clients from proto files
-✅ Context-based authentication and headers
-✅ Easy-to-extend for new microservices
+- ✅ Modular and scalable structure
+- ✅ Clean separation of GraphQL and service layers
+- ✅ Auto-generated gRPC clients from proto files
+- ✅ Context-based authentication and headers
+- ✅ Easy-to-extend for new microservices
 
 ## 👨‍💻 Author
 Developed by Mahdi Dehghani
