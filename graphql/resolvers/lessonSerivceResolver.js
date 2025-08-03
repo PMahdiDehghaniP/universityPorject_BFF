@@ -13,7 +13,6 @@ const addNewLesson = async (_, { addNewLessonInput }) => {
       College_id: addNewLessonInput?.collegeId,
     };
     const response = await addNewLessonGrpc(grpcInput);
-    console.log(response);
     return {
       lessonId: response.Lesson_id,
       message: response.Message,

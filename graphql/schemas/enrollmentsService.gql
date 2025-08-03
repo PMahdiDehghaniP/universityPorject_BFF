@@ -11,6 +11,7 @@ enum lessonStatus {
   DELETED
   NOTCOMPLETED
 }
+
 type studentLessonsItem {
   studentName: String
   studentLastname: String
@@ -30,6 +31,14 @@ input getStudentLessonsInput {
   studentId: String!
 }
 
+input addNewStudentLessonInTermInput {
+  studentId: String!
+  lessonInTermId: String!
+}
+
+type addNewStudentLessonInTermResponse {
+  message: String
+}
 type getStudentLessonsResponse {
   studentLessons: [studentLessonsItem!]!
 }
@@ -38,4 +47,10 @@ type Query {
   getStudentLessons(
     getStudentLessonsInput: getStudentLessonsInput!
   ): getStudentLessonsResponse!
+}
+
+type Mutation {
+  addNewStudentLessonInTerm(
+    addNewStudentLessonInTermInput: addNewStudentLessonInTermInput!
+  ): addNewStudentLessonInTermResponse!
 }

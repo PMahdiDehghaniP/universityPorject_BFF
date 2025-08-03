@@ -33,9 +33,32 @@ const getStudentLessons = async (_, { getStudentLessonsInput }) => {
     throw error;
   }
 };
-
+const addNewStudentLessonInTerm = async (
+  _,
+  { addNewStudentLessonInTermInput }
+) => {
+  try {
+    const enrollmentClient = getGrpcClient("Enrollment", "EnrollmentService");
+    const addNewStudentLessonInTermGrpc = promisify(
+      enrollmentClient.AddNewLessonTermForStudent
+    ).bind(enrollmentClient);
+    const grpcInput = {
+      Student_id: addNewStudentLessonInTermInput.studentId,
+      Lesson_in_term_id: addNewStudentLessonInTermInput.lessonInTermId,
+    };
+    const response = await addNewStudentLessonInTermGrpc(grpcInput);
+    return {
+      message: response.Message,
+    };
+  } catch (error) {
+    throw error;
+  }
+};
 module.exports = {
   Query: {
     getStudentLessons,
+  },
+  Mutation: {
+    addNewStudentLessonInTerm,
   },
 };
