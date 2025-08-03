@@ -1,0 +1,41 @@
+enum seasons {
+  SPRING
+  SUMMER
+  AUTUMN
+  WINTER
+}
+
+enum lessonStatus {
+  PASSED
+  FAILED
+  DELETED
+  NOTCOMPLETED
+}
+type studentLessonsItem {
+  studentName: String
+  studentLastname: String
+  lessonName: String
+  tedadVahed: Int
+  lessonTime: String
+  grade: Int
+  status: lessonStatus
+  teacherName: String
+  teacherLastname: String
+  collegeName: String
+  termYear: String
+  termSeason: seasons
+}
+
+input getStudentLessonsInput {
+  studentId: String!
+}
+
+type getStudentLessonsResponse {
+  studentLessons: [studentLessonsItem!]!
+}
+
+type Query {
+  getStudentLessons(
+    getStudentLessonsInput: getStudentLessonsInput!
+  ): getStudentLessonsResponse!
+}
