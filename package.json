@@ -4,7 +4,8 @@
   "description": "This is the **Back-end For Frontend (BFF)** server for the UniversityProject.  \r It acts as a middle layer between the frontend and microservices, built with **Apollo Server** and **gRPC** to provide a unified and optimized GraphQL API.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
